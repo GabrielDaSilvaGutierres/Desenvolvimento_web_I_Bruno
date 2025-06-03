@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Funcionário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <button class="admitir" onclick="abrirFormulario()">Salvar</button>
+        <input type="text" id="pesquisa" placeholder="Pesquisar funcionários...">
+        <button class="pesquisar" onclick="pesquisar()">Pesquisar</button>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Cargo</th>
+                    <th>Jornada de Trabalho</th>
+                    <th>Salário</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-funcionarios"></tbody>
+        </table>
+    </div>
+
+    <!-- Formulário Modal -->
+    <div id="formulario" class="modal">
+        <div class="modal-content">
+            <h2>Adicionar Funcionário</h2>
+            <input type="text" id="nome" placeholder="Nome">
+            <input type="text" id="cargo" placeholder="Cargo">
+            <input type="text" id="jornada" placeholder="Jornada (ex: 8h)">
+            <input type="text" id="salario" placeholder="Salário">
+            <button onclick="salvarFuncionario()">Salvar</button>
+            <button onclick="fecharFormulario()">Cancelar</button>
+        </div>
+    </div>
+
+    <script src="node.js"></script>
+</body>
+</html>
